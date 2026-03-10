@@ -44,3 +44,33 @@ aside {
     }
   }
 }
+
+/*Aplicando responsividade */
+
+@media (max-width: 768px) {
+  #app {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  aside {
+    padding: 1.5rem;
+    order: -1;
+    text-align: center;
+    padding: 2rem 1.5rem;
+
+    & img {
+      max-width: 80%;
+      margin: auto;
+    }
+  }
+
+  aside header h2,
+  aside header p {
+    display: none;
+  }
+}

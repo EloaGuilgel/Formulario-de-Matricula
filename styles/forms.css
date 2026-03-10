@@ -25,3 +25,9 @@ fieldset + fieldset {
   display: flex;
   gap: 1rem;
 }
+
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+}
