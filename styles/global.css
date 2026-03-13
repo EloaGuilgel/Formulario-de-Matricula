@@ -23,7 +23,7 @@
 }
 
 body {
-  overflow: hidden;
+ overflow-y: auto;
   font: var(--text);
   color: var(--text-secondary);
 }
