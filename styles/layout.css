@@ -5,8 +5,10 @@
 }
 
 main {
-  overflow: auto;
+  overflow-y: auto;
+  height: 100vh;
   padding: 4rem;
+
 
   & .main-container {
     max-width: 33rem;
