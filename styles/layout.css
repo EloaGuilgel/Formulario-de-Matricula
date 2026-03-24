@@ -30,6 +30,14 @@ aside {
   background-color: var(--surface-secondary);
   padding: 4rem;
 
+  position: sticky;
+  top: 0;
+
+  height: 100vh;
+  display: flex;
+  align-items: center; /* centraliza conteúdo */
+
+
   & .aside-container {
     max-width: 31rem;
     & > img {
@@ -45,6 +53,10 @@ aside {
     }
   }
 }
+.aside-container img {
+  max-width: 100%;
+  height: auto;
+}
 
 /*Aplicando responsividade */
 
@@ -58,14 +70,10 @@ aside {
     padding: 1.5rem;
   }
 
-  aside {
-    padding: 1.5rem;
-    order: -1;
-    text-align: center;
-    padding: 2rem 1.5rem
-  position: sticky;
-  top: 0;
-  height: 100vh;
+
+
+  .aside-container {
+  width: 100%;
 }
 
     & img {
