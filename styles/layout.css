@@ -1,85 +1,97 @@
 #app {
   display: grid;
   grid-template-columns: 51.25% 48.75%;
-   min-height: 100vh;
+  min-height: 100vh;
 }
 
 main {
   overflow-y: auto;
   height: 100vh;
   padding: 4rem;
+}
 
+main .main-container {
+  max-width: 33rem;
+  margin-left: auto;
+}
 
-  & .main-container {
-    max-width: 33rem;
-    margin-left: auto;
-  }
-  & .back {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-  & h1 {
-    font: 600 1.5rem/1.25 var(--font-family);
-    margin-bottom: 0.5rem;
-  }
+main .back {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+main h1 {
+  font: 600 1.5rem/1.25 var(--font-family);
+  margin-bottom: 0.5rem;
 }
 
 aside {
   background-color: var(--surface-secondary);
   padding: 4rem;
-
   position: sticky;
   top: 0;
-
   height: 100vh;
   display: flex;
-  align-items: center; /* centraliza conteúdo */
-
-
-  & .aside-container {
-    max-width: 31rem;
-    & > img {
-      margin-top: 2rem;
-    }
-  }
-  & h2 {
-    font: 600 2.5rem/1.25 var(--font-family);
-    margin-bottom: 0.5rem;
-
-    & span {
-      color: var(--text-highlight);
-    }
-  }
+  align-items: center;
 }
+
+aside .aside-container {
+  max-width: 31rem;
+}
+
+aside .aside-container > img {
+  margin-top: 2rem;
+}
+
+aside h2 {
+  font: 600 2.5rem/1.25 var(--font-family);
+  margin-bottom: 0.5rem;
+}
+
+aside h2 span {
+  color: var(--text-highlight);
+}
+
 .aside-container img {
   max-width: 100%;
   height: auto;
 }
 
-/*Aplicando responsividade */
-
 @media (max-width: 768px) {
   #app {
     grid-template-columns: 1fr;
-    height: auto;
+    min-height: auto;
   }
 
   main {
+    order: 2;
+    height: auto;
+    overflow-y: visible;
     padding: 1.5rem;
   }
 
+  aside {
+    order: 1;
+    position: static;
+    height: auto;
+    padding: 1.5rem 1.5rem 0;
+  }
 
+  aside .aside-container {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 
-  .aside-container {
-  width: 100%;
-}
-
-    & img {
-      max-width: 80%;
-      margin: auto;
-    }
+  aside .aside-container > img {
+    width: min(12rem, 60vw);
+    align-self: center;
+    margin-top: 0;
   }
 
   aside header h2,

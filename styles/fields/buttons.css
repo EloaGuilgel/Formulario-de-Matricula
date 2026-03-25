@@ -1,18 +1,33 @@
+.actions-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
 button {
   all: unset;
-  font-weight: 500;
-  color: var(--text-highlight);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
   padding: 0.75rem 1.5rem;
+  border: 1px solid transparent;
+  color: var(--text-highlight);
+  font: 600 0.875rem/1 var(--font-family);
   border-radius: 0.5rem;
   cursor: pointer;
+  box-sizing: border-box;
+  white-space: nowrap;
 
   &.btn-primary {
+    min-width: 10.625rem;
     color: white;
     background-color: #e43a12;
   }
 
   &.btn-secondary {
-    margin-left: auto;
+    min-width: 10.625rem;
     border: 1px solid var(--text-highlight);
 
     &:hover,
@@ -40,9 +55,7 @@ button {
 
   .actions-wrapper button {
     width: 100%;
-    height: 48px;
     margin: 0;
-    box-sizing: border-box;
   }
 
   .btn-secondary {
@@ -51,12 +64,6 @@ button {
 
   .actions-wrapper button {
     width: 100%;
-    height: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     text-align: center;
   }
 }

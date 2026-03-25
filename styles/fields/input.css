@@ -64,7 +64,7 @@ input {
     color: var(--text-primary);
   }
 
-  &:invalid {
+  &:not(:placeholder-shown):invalid {
     border: 0.125rem solid var(--semantic-error);
   }
 
@@ -75,7 +75,11 @@ input {
     margin-top: 0.25rem;
   }
 
-  &[required] + .error {
+  & + .error {
+    display: none;
+  }
+
+  &[required]:not(:placeholder-shown):invalid + .error {
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -85,7 +89,7 @@ input {
     margin-top: 0.25rem;
   }
 
-  &:not(:focus):valid + .error {
+  &[required]:valid + .error {
     display: none;
   }
 }
